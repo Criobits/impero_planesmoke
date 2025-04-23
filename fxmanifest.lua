@@ -1,11 +1,22 @@
 fx_version 'bodacious'
+lua54 'yes'
 game 'gta5'
 
-name 'plane smoke fixed for TT'
-author 'logan/IllusiveTea'
+author 'Criobits'
+description 'Fumo aereo'
+version '1.1.0'
 
-client_scripts {
+shared_scripts {
   'config.lua',
   'utils.lua',
-  'cl_smoke.lua'
+  'shared/items.lua',
+}
+
+server_scripts {
+  '@oxmysql/lib/MySQL.lua',
+  'server/sv_smoke.lua',
+}
+
+client_scripts {
+  'client/cl_smoke.lua',
 }
